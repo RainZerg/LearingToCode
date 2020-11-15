@@ -31,12 +31,12 @@ c.hit(10)
 print(c.health)
 print(c.armor)
 
-with open(r'~/Documents/GitHub/LearingToCode/Python/game_state.bin', 'w+b') as f:
+with open(r'game_state.bin', 'w+b') as f:
     pickle.dump(c, f)
 
 c = None
 print(c)
-with open(r'~/Documents/GitHub/LearingToCode/Python/game_state.bin', 'rb') as f:
+with open(r'game_state.bin', 'rb') as f:
     c = pickle.load(f)
 
 print(c.health)
